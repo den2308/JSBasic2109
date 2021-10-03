@@ -1,1 +1,46 @@
+p {
+  color: red;
+  font-family:'Open Sans';
+  
+}
+#paragraph-selector{
+  color:green
+}
+.class-selector{
+  color:black;
+  text-align:center;
+  border:2px solid black;
+}
+img[src]{
+  color:gray
+}
+input:hover{
+  color:red
+}
+li{
+  list-style-type:none
+}
+li.uniq{
+  color:orange
+}
 
+article p span { color:blue }
+
+h1 + ul + p { color:orange }
+
+.container{
+  border:2px solid black;
+}
+
+.main-content{
+  color:white;
+  background-color:blue;
+  width:calc(90% - 40px);
+}
+.transform-test{
+  margin-top:50px;
+  transform:rotate(0.8turn);
+  background-color:orange;
+  width:40px;
+  height:40px
+}

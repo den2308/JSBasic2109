@@ -1,1 +1,29 @@
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport">
+    <title>Example of DOM</title>
+  </head>
+  <body>
+      <section>
+        <img src="/somepictures.png" alt="some important text">
+      </section>
+      <p id="textwithEvent" onClick="handleTestClick()">
+        Set click for me please
+      </p>
+      <input onClick="handleInputClick()"/>
+      <div onClick="console.log('test up1')">
+       <div onFocus="console.log('test up2')">
+        <p onClick="event.stopPropagation()">
+          some text
+        </p>
+        <p onClick="console.log('test up par2')">
+          some text2
+        </p>
+      </div>
+      </div>
+     <a heref="/" onClick="event.preventDefault()">Click me</a>
+  </body>
+</html>

@@ -1,14 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import SecondComponent from './SecondComponent'
+import MyFirstContext from './myFirstContext'
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <SecondComponent />
-      </div >
-    )
-  }
+const App = () => {
+  return (
+    <MyFirstContext.Provider value={{
+      username: 'John Weak'
+    }}>
+      <SecondComponent />
+    </MyFirstContext.Provider >
+  )
 }
 
 export default App

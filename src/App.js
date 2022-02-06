@@ -2,6 +2,8 @@ import React from 'react'
 import { Routes, Route, Link } from "react-router-dom";
 import { PageHeader } from 'antd';
 import { useDispatch, useStore } from 'react-redux'
+import { getWEatherDataThunk } from './store/thunk/thnks';
+import { decrementAction } from './store/action/action';
 
 import SecondComponent from './SecondComponent'
 import ThirdComponent from './ThirdComponent'
@@ -14,7 +16,13 @@ const App = () => {
     console.log('store', store.getState())
   }
   const handleDecrement = () => {
-    dispatch({ type: 'DECREMENT' })
+    //varian 1
+    //dispatch({ type: 'DECREMENT' })
+    //varian 2
+    dispatch(decrementAction())
+  }
+  const handleGetWeatherData = () => {
+    dispatch(getWEatherDataThunk())
   }
   return (
     <div >
@@ -27,6 +35,7 @@ const App = () => {
           <Link key="nexcomponent" to="/next-component">Second component</Link>,
           <button onClick={handleIncrement}>Increment</button>,
           <button onClick={handleDecrement}>Decrement</button>,
+          <button onClick={handleGetWeatherData}>Get weather data</button>
         ]}
       />
       <Routes>
